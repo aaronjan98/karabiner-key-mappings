@@ -1,0 +1,29 @@
+{
+	"title": "'Insert' joke here",
+	"rules": [
+		{
+			"description": "'Insert' joke here",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "left_control",
+                        "modifiers": {
+                            "mandatory": []
+                        }
+					},
+					"to_if_alone": [
+						{
+							"shell_command": "afplay /Users/jan/Documents/dev-off/scratch/sound_effects/denied_sound_effect.mp3"
+						}
+					],
+                    "to_if_held_down": [
+						{
+							"shell_command": "afplay --rate 0.3 /Users/jan/Documents/dev-off/scratch/sound_effects/denied_sound_effect.mp3"
+						}
+                    ],
+					"type": "basic"
+				}
+			]
+		}
+	]
+}
