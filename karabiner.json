@@ -231,11 +231,6 @@
                     "shell_command": "open -na 'Brave Browser' --args 'https://www.youtube.com/'"
                   }
                 ],
-                "to": [
-                  {
-                    "key_code": "down_arrow"
-                  }
-                ],
                 "type": "basic"
               },
               {
