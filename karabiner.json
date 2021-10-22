@@ -873,6 +873,27 @@
                         ]
                     },
                     {
+                      "description": "Backspace (left_shift+d to backspace)",
+                      "manipulators": [
+                        {
+                          "from": {
+                            "key_code": "d",
+                            "modifiers": {
+                              "mandatory": [
+                                "left_shift"
+                              ]
+                            }
+                          },
+                          "to": [
+                            {
+                              "key_code": "delete_or_backspace"
+                            }
+                          ],
+                          "type": "basic"
+                        }
+                      ]
+                    },
+                    {
                         "description": "semicolon → Shift (semicolon if alone)",
                         "manipulators": [
                             {
