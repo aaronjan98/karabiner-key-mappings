@@ -828,6 +828,18 @@
                         ]
                     },
                     {
+                        "type": "basic",
+                        "from": {
+                            "key_code": "left_option"
+                        },
+                        "to": [
+                            {
+                                "key_code": "left_option",
+                                "lazy": true
+                            }
+                        ]
+                    },
+                    {
                         "description": "s → option (s if alone)",
                         "manipulators": [
                             {
