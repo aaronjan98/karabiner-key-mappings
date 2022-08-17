@@ -1573,7 +1573,7 @@
           },
           "to": [
             {
-              "apple_vendor_keyboard_key_code": "mission_control"
+              "consumer_key_code": "mute"
             }
           ]
         },
@@ -1623,7 +1623,7 @@
           },
           "to": [
             {
-              "consumer_key_code": "mute"
+              "consumer_key_code": "play_or_pause"
             }
           ]
         },
