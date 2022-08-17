@@ -1,1805 +1,1830 @@
 {
-    "global": {
-        "check_for_updates_on_startup": false,
-        "show_in_menu_bar": true,
-        "show_profile_name_in_menu_bar": false
-    },
-    "profiles": [
+  "global": {
+    "check_for_updates_on_startup": false,
+    "show_in_menu_bar": true,
+    "show_profile_name_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
+        },
+        "rules": []
+      },
+      "devices": [],
+      "fn_function_keys": [
         {
-            "complex_modifications": {
-                "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
-                    "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
-                },
-                "rules": []
-            },
-            "devices": [],
-            "fn_function_keys": [
-                {
-                    "from": {
-                        "key_code": "f1"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f2"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f3"
-                    },
-                    "to": [
-                        {
-                            "apple_vendor_keyboard_key_code": "mission_control"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f4"
-                    },
-                    "to": [
-                        {
-                            "apple_vendor_keyboard_key_code": "spotlight"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f5"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "dictation"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f6"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f6"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f7"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "rewind"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f8"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "play_or_pause"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f9"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "fast_forward"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f10"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f11"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f12"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_increment"
-                        }
-                    ]
-                }
-            ],
-            "name": "nothing",
-            "parameters": {
-                "delay_milliseconds_before_open_device": 1000
-            },
-            "selected": false,
-            "simple_modifications": [],
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "indicate_sticky_modifier_keys_state": true,
-                "mouse_key_xy_scale": 100
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_decrement"
             }
+          ]
         },
         {
-            "complex_modifications": {
-                "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
-                    "basic.to_delayed_action_delay_milliseconds": 100,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
-                },
-                "rules": [
-                    {
-                        "description": "Caps Lock → Control (⌃) (Escape if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 100,
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "o Launcher",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "y"
-                                        },
-                                        {
-                                            "key_code": "t"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -na 'Brave Browser' --args 'https://www.youtube.com/'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "n"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -na 'Brave Browser' --args 'https://www.netflix.com/browse'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "a"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -na 'Brave Browser' --args 'https://www.amazon.com/'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "m"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a 'spotify.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "s"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a 'slack.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "b"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -na 'Brave Browser'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "x"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -na 'Brave Browser' --args --incognito"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "launcher_mode_v4",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'pyCharm CE.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "p"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a 'pyCharm CE.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "launcher_mode_v4",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": {
-                                        "mandatory": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'Visual Studio Code.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "c"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a 'Visual Studio Code.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "launcher_mode_v4",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'iTerm.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "o"
-                                        },
-                                        {
-                                            "key_code": "i"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a 'iTerm.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": []
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "s"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "launcher_mode_v4",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "launcher_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "open -a screenshot.app"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "v → Hyper (v if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "v"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "d → Command (d if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "d"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "s → option (s if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_option",
-                                        "modifiers": [
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "s"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "a → Shift (a if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "a"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Backspace (left_shift+d to backspace)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "semicolon → Shift (semicolon if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_shift",
-                                        "modifiers": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper + h/j/k/l == vim directional Keys",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "f → Control Hyper (f if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 50,
-                                    "basic.to_delayed_action_delay_milliseconds": 100,
-                                    "basic.to_if_alone_timeout_milliseconds": 150,
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "f"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Toggle caps_lock by pressing left_shift then right_shift",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "caps_lock"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "caps_lock"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Shifts Move Forward and Backward by 1 word",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "fn",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "left_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "fn",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                      "description": "holding spacebar allows for numbers to be typed from letters",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "spacebar",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "set_variable": {
-                                "name": "space_mode",
-                                "value": 1
-                              }
-                            }
-                          ],
-                          "to_if_alone": [
-                            {
-                              "key_code": "spacebar"
-                            }
-                          ],
-                          "to_after_key_up": [
-                            {
-                              "set_variable": {
-                                "name": "space_mode",
-                                "value": 0
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "description": "holding function allows for fxn keys to be typed from letters",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "apple_vendor_keyboard_key_code": "keyboard_fn",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "set_variable": {
-                                "name": "function_mode",
-                                "value": 1
-                              }
-                            }
-                          ],
-                          "to_if_alone": [
-                            {
-                              "key_code": "fn"
-                            }
-                          ],
-                          "to_after_key_up": [
-                            {
-                              "set_variable": {
-                                "name": "function_mode",
-                                "value": 0
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "description": "fn: fn+[letters] to fn keys",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "4",
-                            "modifiers": {
-                              "mandatory": [
-                                "keyboard_fn"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                                "shell_command": "open -a ScreenSaverEngine"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "function_mode",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "description": "screen saver when option key is held down",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "left_option"
-                          },
-                        "parameters": {
-                            "basic.to_if_alone_timeout_milliseconds": 250,
-                            "basic.to_if_held_down_threshold_milliseconds": 250
-                        },
-                        "to_if_alone": [
-                            {
-                                "key_code": "left_option"
-                            }
-                        ],
-                        "to_if_held_down": [
-                            {
-                                "shell_command": "open -a ScreenSaverEngine"
-                            }
-                        ]
-                        }
-                      ]
-                    },
-                    {
-                      "description": "space: Space+[letters] to numbers",
-                      "manipulators": [
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "z",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "0"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "t",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "1"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "n",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "2"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "m",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "3"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "r",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "4"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "l",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "5"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "j",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "6"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "k",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "7"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "h",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "8"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "b",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "9"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "basic",
-                          "from": {
-                            "key_code": "p",
-                            "modifiers": {
-                              "optional": [
-                                "any"
-                              ]
-                            }
-                          },
-                          "to": [
-                            {
-                              "key_code": "9"
-                            }
-                          ],
-                          "conditions": [
-                            {
-                              "type": "variable_if",
-                              "name": "space_mode",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                ]
-            },
-            "devices": [],
-            "fn_function_keys": [
-                {
-                    "from": {
-                        "key_code": "f1"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f2"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f3"
-                    },
-                    "to": [
-                        {
-                            "apple_vendor_keyboard_key_code": "mission_control"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f4"
-                    },
-                    "to": [
-                        {
-                            "shell_command": "open -a ScreenSaverEngine"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f5"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "dictation"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f6"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f6"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f7"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "rewind"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f8"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "play_or_pause"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f9"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "fast_forward"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f10"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f11"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f12"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_increment"
-                        }
-                    ]
-                }
-            ],
-            "name": "dev",
-            "parameters": {
-                "delay_milliseconds_before_open_device": 1000
-            },
-            "selected": true,
-            "simple_modifications": [],
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "indicate_sticky_modifier_keys_state": true,
-                "mouse_key_xy_scale": 100
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_increment"
             }
+          ]
         },
         {
-            "complex_modifications": {
-                "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
-                    "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
-                },
-                "rules": []
-            },
-            "devices": [],
-            "fn_function_keys": [
-                {
-                    "from": {
-                        "key_code": "f1"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f2"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f3"
-                    },
-                    "to": [
-                        {
-                            "apple_vendor_keyboard_key_code": "mission_control"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f4"
-                    },
-                    "to": [
-                        {
-                            "apple_vendor_keyboard_key_code": "spotlight"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f5"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "dictation"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f6"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f6"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f7"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "rewind"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f8"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "play_or_pause"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f9"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "fast_forward"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f10"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f11"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f12"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_increment"
-                        }
-                    ]
-                }
-            ],
-            "name": "prod",
-            "parameters": {
-                "delay_milliseconds_before_open_device": 1000
-            },
-            "selected": false,
-            "simple_modifications": [],
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "indicate_sticky_modifier_keys_state": true,
-                "mouse_key_xy_scale": 100
+          "from": {
+            "key_code": "f3"
+          },
+          "to": [
+            {
+              "apple_vendor_keyboard_key_code": "mission_control"
             }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": [
+            {
+              "apple_vendor_keyboard_key_code": "spotlight"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f5"
+          },
+          "to": [
+            {
+              "consumer_key_code": "dictation"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": [
+            {
+              "consumer_key_code": "mute"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ]
         }
-    ]
+      ],
+      "name": "nothing",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
+      "selected": false,
+      "simple_modifications": [],
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "indicate_sticky_modifier_keys_state": true,
+        "mouse_key_xy_scale": 100
+      }
+    },
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 100,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
+        },
+        "rules": [
+          {
+            "description": "Caps Lock → Control (⌃) (Escape if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 100,
+                  "basic.to_if_held_down_threshold_milliseconds": 100
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "o Launcher",
+            "manipulators": [
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "y"
+                    },
+                    {
+                      "key_code": "t"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -na 'Brave Browser' --args 'https://www.youtube.com/'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "n"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -na 'Brave Browser' --args 'https://www.netflix.com/browse'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "a"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -na 'Brave Browser' --args 'https://www.amazon.com/'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "m"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a 'spotify.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "s"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a 'slack.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "b"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -na 'Brave Browser'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "x"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -na 'Brave Browser' --args --incognito"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "launcher_mode_v4",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'pyCharm CE.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "p"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a 'pyCharm CE.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "launcher_mode_v4",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Visual Studio Code.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "c"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a 'Visual Studio Code.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "launcher_mode_v4",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'iTerm.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "o"
+                    },
+                    {
+                      "key_code": "i"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a 'iTerm.app'"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "modifiers": {
+                    "mandatory": []
+                  },
+                  "simultaneous": [
+                    {
+                      "key_code": "s"
+                    },
+                    {
+                      "key_code": "h"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "key_down_order": "strict",
+                    "key_up_order": "strict_inverse",
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "launcher_mode_v4",
+                          "value": 0
+                        }
+                      }
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launcher_mode_v4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "shell_command": "open -a screenshot.app"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "v → Hyper (v if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 200,
+                  "basic.to_if_held_down_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "v"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "d → Command (d if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 200,
+                  "basic.to_if_held_down_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "d"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "s → option (s if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 200,
+                  "basic.to_if_held_down_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "key_code": "left_option",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "s"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "a → Shift (a if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 200,
+                  "basic.to_if_held_down_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "a"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Backspace (left_shift+d to backspace)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "semicolon → Shift (semicolon if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "semicolon",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 200,
+                  "basic.to_if_held_down_threshold_milliseconds": 500
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "modifiers": [
+                      "right_shift"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "semicolon"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper + h/j/k/l == vim directional Keys",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "f → Control Hyper (f if alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 50,
+                  "basic.to_delayed_action_delay_milliseconds": 100,
+                  "basic.to_if_alone_timeout_milliseconds": 150,
+                  "basic.to_if_held_down_threshold_milliseconds": 150
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "modifiers": [
+                      "left_shift",
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "f"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Toggle caps_lock by pressing left_shift then right_shift",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "right_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "right_shift"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Shifts Move Forward and Backward by 1 word",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "fn",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "fn",
+                    "modifiers": [
+                      "fn"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "holding spacebar allows for numbers to be typed from letters",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "space_mode",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "space_mode",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "holding function allows for fxn keys to be typed from letters",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "apple_vendor_keyboard_key_code": "keyboard_fn",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "function_mode",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "fn"
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "function_mode",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "fn: fn+[letters] to fn keys",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "keyboard_fn"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a ScreenSaverEngine"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "function_mode",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "screen saver when option key is held down",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_option"
+                },
+                "parameters": {
+                  "basic.to_if_alone_timeout_milliseconds": 250,
+                  "basic.to_if_held_down_threshold_milliseconds": 250
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "left_option"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "shell_command": "open -a ScreenSaverEngine"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "display sleeps when right option key is held down",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_option"
+                },
+                "parameters": {
+                  "basic.to_if_alone_timeout_milliseconds": 250,
+                  "basic.to_if_held_down_threshold_milliseconds": 250
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "right_option"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "shell_command": "pmset displaysleepnow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "space: Space+[letters] to numbers",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "z",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "3"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "4"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "5"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "6"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "7"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "8"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "space_mode",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [],
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_decrement"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_increment"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to": [
+            {
+              "apple_vendor_keyboard_key_code": "mission_control"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": [
+            {
+              "shell_command": "open -a ScreenSaverEngine"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f5"
+          },
+          "to": [
+            {
+              "consumer_key_code": "dictation"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": [
+            {
+              "consumer_key_code": "mute"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ]
+        }
+      ],
+      "name": "dev",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
+      "selected": true,
+      "simple_modifications": [],
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "indicate_sticky_modifier_keys_state": true,
+        "mouse_key_xy_scale": 100
+      }
+    },
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
+        },
+        "rules": []
+      },
+      "devices": [],
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_decrement"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_increment"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to": [
+            {
+              "apple_vendor_keyboard_key_code": "mission_control"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": [
+            {
+              "apple_vendor_keyboard_key_code": "spotlight"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f5"
+          },
+          "to": [
+            {
+              "consumer_key_code": "dictation"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": [
+            {
+              "consumer_key_code": "mute"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ]
+        }
+      ],
+      "name": "prod",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
+      "selected": false,
+      "simple_modifications": [],
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "indicate_sticky_modifier_keys_state": true,
+        "mouse_key_xy_scale": 100
+      }
+    }
+  ]
 }
